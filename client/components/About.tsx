@@ -112,13 +112,13 @@ export default function About() {
                 </div>
                 <div className="bg-gray-800/30 p-6 rounded-xl border border-gray-700/50">
                   <h4 className="text-blue-400 text-lg font-semibold mb-2">Projects</h4>
-                  <p className="text-gray-300">20+ Completed</p>
+                  <p className="text-gray-300">25+ Completed</p>
                 </div>
               </div>
             </motion.div>
 
             {/* Skills Grid */}
-            <motion.div
+            <motion.div id="skills"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
