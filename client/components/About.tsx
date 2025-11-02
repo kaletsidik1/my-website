@@ -55,7 +55,7 @@ export default function About() {
               About Me
             </h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              Transforming ideas into digital reality through code and creativity
+              Transforming ideas into digital reality through code, creativity and collaboration.
             </p>
           </motion.div>
 
@@ -70,10 +70,10 @@ export default function About() {
             >
               <div className="bg-gray-800/50 backdrop-blur-lg p-8 rounded-2xl border border-gray-700/50 shadow-xl">
                 <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                  Hey there! I&apos;m Kaletsidik Ayalew, a passionate web developer with a keen interest in crafting innovative digital experiences. My journey in tech is driven by an insatiable curiosity and a love for solving complex problems through elegant code.
+                  Hey, I&apos;m Kaletsidik Ayalew, a software engineer, AI researcher, and leadership enthusiast who believes technology is most powerful when it serves people. I love transforming ideas into intelligent, meaningful systems - from ML-driven apps and smart automation tools to blockchain and community-centered platforms. My journey has been shaped by curiosity and a commitment to excellence. Whether it’s training models, building full-stack apps, or optimizing workflows, I see each project as an opportunity to create something that genuinely impacts lives.
                 </p>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  From frontend magic with React to backend wizardry with databases, I thrive on turning ideas into functional, beautiful applications. When I&apos;m not coding, you&apos;ll find me exploring new technologies, reading tech blogs, or sketching out my next project concept.
+                  Beyond coding, I&apos;m a leader at heart - a believer in teamwork, empathy, and purpose-driven innovation. I&apos;ve led clubs, built learning communities, and mentored peers, always striving to create spaces where others can grow and dream bigger. My love for coffee keeps me fueled through long brainstorming nights, while my passion for leadership and learning drives me to take on new challenges fearlessly. For me, success isn’t just about writing clean code - it’s about inspiring others, solving real problems, and leaving every space a little better than I found it.
                 </p>
               </div>
               
