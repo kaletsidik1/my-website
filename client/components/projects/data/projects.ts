@@ -4,6 +4,60 @@ import { Project } from './types';
 
 export const projects: Project[] = [
   {
+    title: "Crowdfunding DApp",
+    description:
+      "Decentralized crowdfunding platform enabling transparent blockchain-based fundraising.",
+    detailedDescription:
+      "This Web3 application allows users to launch campaigns, contribute funds, and claim rewards directly on the Ethereum blockchain. Built with Solidity smart contracts and a Next.js frontend, it ensures trustless transactions and transparent fund management.",
+    image: "/crowdfund-dapp.png",
+    github: "https://github.com/AlexKalll/crowd-funding-DApp",
+    demo: "https://crowdfundiing-dapp.vercel.app/",
+    tags: [
+      "Blockchain",
+      "Web3",
+      "Ethereum",
+      "Smart Contracts",
+      "Next.js",
+      "TypeScript",
+      "Decentralized Apps",
+      "Crypto",
+    ],
+    keyFeatures: [
+      "Launch and fund campaigns securely via blockchain",
+      "Tiered reward system for contributors",
+      "MetaMask wallet integration",
+      "Automatic refunds for failed campaigns",
+    ],
+    technicalChallenges: [
+      "Integrating on-chain smart contract data with a modern frontend",
+      "Ensuring smooth user transactions and error handling",
+      "Maintaining security and transparency across blockchain interactions",
+    ],
+    techStack: [
+      {
+        name: "Solidity",
+        description:
+          "Programming language for writing smart contracts that power campaign logic on Ethereum.",
+      },
+      {
+        name: "Next.js & React",
+        description:
+          "Used for building the responsive and dynamic user interface for the web platform.",
+      },
+      {
+        name: "Hardhat",
+        description:
+          "Framework for testing, deploying, and debugging Ethereum smart contracts.",
+      },
+      {
+        name: "ethers.js",
+        description:
+          "Library that enables the frontend to interact seamlessly with blockchain networks and wallets.",
+      },
+    ],
+  },
+  
+  {
     title: "Axon-Pharma – LLM-Powered Pharmacy Service App",
     description:
       "Conversational pharmacy app that helps users check medicines, prices, and place orders. Admins can manage inventory and post Telegram updates.",
@@ -52,60 +106,6 @@ export const projects: Project[] = [
         name: "Telegram Bot API",
         description:
           "Used to send automated updates and alerts from the admin dashboard.",
-      },
-    ],
-  },
-
-  {
-    title: "Crowdfunding DApp",
-    description:
-      "Decentralized crowdfunding platform enabling transparent blockchain-based fundraising.",
-    detailedDescription:
-      "This Web3 application allows users to launch campaigns, contribute funds, and claim rewards directly on the Ethereum blockchain. Built with Solidity smart contracts and a Next.js frontend, it ensures trustless transactions and transparent fund management.",
-    image: "/crowdfunding.png",
-    github: "https://github.com/AlexKalll/crowd-funding-DApp",
-    demo: "https://crowdfundiing-dapp.vercel.app/",
-    tags: [
-      "Blockchain",
-      "Web3",
-      "Ethereum",
-      "Smart Contracts",
-      "Next.js",
-      "TypeScript",
-      "Decentralized Apps",
-      "Crypto",
-    ],
-    keyFeatures: [
-      "Launch and fund campaigns securely via blockchain",
-      "Tiered reward system for contributors",
-      "MetaMask wallet integration",
-      "Automatic refunds for failed campaigns",
-    ],
-    technicalChallenges: [
-      "Integrating on-chain smart contract data with a modern frontend",
-      "Ensuring smooth user transactions and error handling",
-      "Maintaining security and transparency across blockchain interactions",
-    ],
-    techStack: [
-      {
-        name: "Solidity",
-        description:
-          "Programming language for writing smart contracts that power campaign logic on Ethereum.",
-      },
-      {
-        name: "Next.js & React",
-        description:
-          "Used for building the responsive and dynamic user interface for the web platform.",
-      },
-      {
-        name: "Hardhat",
-        description:
-          "Framework for testing, deploying, and debugging Ethereum smart contracts.",
-      },
-      {
-        name: "ethers.js",
-        description:
-          "Library that enables the frontend to interact seamlessly with blockchain networks and wallets.",
       },
     ],
   },
@@ -219,11 +219,11 @@ export const projects: Project[] = [
   },
 
   {
-    title: "Image Segmentation Studio (FH Edition)",
-    description: "Interactive web app for segmenting and analyzing images using AI.",
+    title: "Image Segmentation Studio",
+    description: "Interactive web app for segmenting and analyzing images using Union-Find algorithm.",
     detailedDescription:
-      "A professional image segmentation platform built with Streamlit that applies the Felzenszwalb–Huttenlocher graph-based algorithm. Users can adjust parameters in real time, view side-by-side results, and download segmented images with analytics. Designed for research, education, and computer vision exploration.",
-    image: "/img-segmentation.png",
+      "A professional image segmentation platform built with Streamlit that applies the Felzenszwalb–Huttenlocher graph-based algorithm that leverages Union-Find data structure. Users can adjust parameters in real time, view side-by-side results, and download segmented images with analytics. Designed for research, education, and computer vision exploration.",
+    image: "/img-seg2.png",
     github: "https://github.com/AlexKalll/img-segmentation",
     demo: "https://img-seg.streamlit.app",
     tags: [
@@ -270,14 +270,14 @@ export const projects: Project[] = [
       },
     ],
   },
-  
+
   {
     title: "CrediTrust Complaint RAG Chatbot",
     description:
       "AI-powered chatbot that analyzes customer complaints using retrieval-augmented generation.",
     detailedDescription:
       "A financial complaint analysis assistant that uses RAG (Retrieval-Augmented Generation) to search, understand, and summarize thousands of customer complaints. It provides interactive visual dashboards and natural-language insights for business teams.",
-    image: "/creditrust.png",
+    image: "/credittrust.png",
     github: "https://github.com/AlexKalll/CrediTrust-Complaint-RAG-Chatbot",
     demo: "https://creditrust-complaint-assistant.streamlit.app/",
     tags: [
