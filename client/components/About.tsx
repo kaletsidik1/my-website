@@ -2,30 +2,57 @@
 'use client'
 import { motion } from 'framer-motion';
 import {
+  SiEthereum,
+  SiSolidity,
   SiNextdotjs,
   SiVite,
   SiJavascript,
   SiReact,
   SiMongodb,
+  SiFirebase,
+  SiGooglecloud,
   SiTailwindcss,
   SiTypescript,
   SiTensorflow,
   SiPytorch,
   SiDocker,
+  SiKubernetes,
+  SiGit,
+  SiDjango,
+  SiPython,
+  SiPhp,
+  SiLaravel,
+  SiFlutter,
 } from "react-icons/si";
+import { FaDatabase, FaNetworkWired } from 'react-icons/fa6';
+import { FaCoffee } from 'react-icons/fa';
 
 export default function About() {
   const skills = [
+    { Icon: SiPython, name: "Python", color: "text-yellow-400", borderColor: "hover:border-yellow-400" },
+    { Icon: SiPytorch, name: "PyTorch", color: "text-orange-400", borderColor: "hover:border-orange-400" },
+    { Icon: SiTensorflow, name: "TensorFlow", color: "text-yellow-400", borderColor: "hover:border-yellow-400" },
+    { Icon: SiDjango, name: "Django", color: "text-green-600", borderColor: "hover:border-green-600" },
+    { Icon: SiTypescript, name: "TypeScript", color: "text-blue-600", borderColor: "hover:border-blue-600" },
+    { Icon: SiEthereum, name: "Blockchain", color: "text-purple-400", borderColor: "hover:border-purple-400" },
+    { Icon: SiSolidity, name: "Solidity", color: "text-blue-700", borderColor: "hover:border-gray-700" },
     { Icon: SiNextdotjs, name: "Next.js", color: "text-gray-100", borderColor: "hover:border-gray-300" },
     { Icon: SiVite, name: "Vite", color: "text-blue-400", borderColor: "hover:border-blue-400" },
     { Icon: SiReact, name: "React", color: "text-cyan-400", borderColor: "hover:border-cyan-400" },
-    { Icon: SiJavascript, name: "JavaScript", color: "text-yellow-500", borderColor: "hover:border-yellow-500" },
-    { Icon: SiMongodb, name: "MongoDB", color: "text-green-500", borderColor: "hover:border-green-500" },
+    { Icon: SiJavascript, name: "JavaScript", color: "text-yellow-400", borderColor: "hover:border-yellow-500" },
     { Icon: SiTailwindcss, name: "Tailwind", color: "text-teal-400", borderColor: "hover:border-teal-400" },
-    { Icon: SiTypescript, name: "TypeScript", color: "text-blue-600", borderColor: "hover:border-blue-600" },
-    { Icon: SiTensorflow, name: "TensorFlow", color: "text-yellow-400", borderColor: "hover:border-yellow-400" },
-    { Icon: SiPytorch, name: "PyTorch", color: "text-orange-400", borderColor: "hover:border-orange-400" },
+    { Icon: FaDatabase, name: "SQL", color: "text-blue-600", borderColor: "hover:border-blue-600" },
+    { Icon: SiMongodb, name: "MongoDB", color: "text-green-500", borderColor: "hover:border-green-500" },
+    { Icon: SiFirebase, name: "Firebase", color: "text-yellow-400", borderColor: "hover:border-yellow-400" },
+    { Icon: SiGooglecloud, name: "Cloud", color: "text-blue-500", borderColor: "hover:border-blue-500" },
+    { Icon: FaNetworkWired, name: "Neo4j", color: "text-lime-600", borderColor: "hover:border-yellow-600" },
     { Icon: SiDocker, name: "Docker", color: "text-blue-400", borderColor: "hover:border-blue-400" },
+    { Icon: SiKubernetes, name: "Kubernetes", color: "text-blue-600", borderColor: "hover:border-blue-600" },
+    { Icon: FaCoffee, name: "Java", color: "text-orange-500", borderColor: "hover:border-orange-500" },
+    { Icon: SiGit, name: "Git", color: "text-red-500", borderColor: "hover:border-red-500" },
+    { Icon: SiPhp, name: "PHP", color: "text-blue-600", borderColor: "hover:border-blue-600" },
+    { Icon: SiLaravel, name: "Laravel", color: "text-red-500", borderColor: "hover:border-red-500" },
+    { Icon: SiFlutter, name: "Flutter", color: "text-blue-400", borderColor: "hover:border-blue-400" },
   ];
 
   return (
@@ -130,13 +157,18 @@ export default function About() {
                         group-hover:shadow-lg group-hover:shadow-blue-500/10
                         bg-gray-800/50 backdrop-blur-sm
                       `}>
-                        <skill.Icon
-                          className={`
-                            ${skill.color} transition-transform duration-300 
-                            group-hover:scale-125
-                          `}
-                          size={28}
-                        />
+                        {skill.Icon ? (
+                          <skill.Icon
+                            className={`
+                              ${skill.color} transition-transform duration-300 
+                              group-hover:scale-125
+                            `}
+                            size={28}
+                          />
+                        ) : (
+                          // Fallback if an icon import is missing to avoid breaking the whole grid
+                          <div className="text-gray-400 text-xl">?</div>
+                        )}
                       </div>
                       <span className="text-sm text-gray-400 group-hover:text-white transition-colors duration-300">
                         {skill.name}
