@@ -9,7 +9,7 @@ export const projects: Project[] = [
       "Conversational pharmacy app that helps users check medicines, prices, and place orders. Admins can manage inventory and post Telegram updates.",
     detailedDescription:
       "Streamlit + Firebase app that uses LLm function calling to power a pharmacy assistant. Customers can chat to check medicine availability, place and track orders, while pharmacy admins manage inventory and broadcast updates via Telegram directly in the admin dashboard.",
-    image: "/axon-pharmacy.png",
+    image: "/axon-pharma.png",
     github: "https://github.com/AlexKalll/axon-pharma",
     demo: "https://axon-automation.streamlit.app/",
     tags: [
@@ -52,59 +52,6 @@ export const projects: Project[] = [
         name: "Telegram Bot API",
         description:
           "Used to send automated updates and alerts from the admin dashboard.",
-      },
-    ],
-  },
-
-  {
-    title: "Image Segmentation Studio (FH Edition)",
-    description: "Interactive web app for segmenting and analyzing images using AI.",
-    detailedDescription:
-      "A professional image segmentation platform built with Streamlit that applies the Felzenszwalb–Huttenlocher graph-based algorithm. Users can adjust parameters in real time, view side-by-side results, and download segmented images with analytics. Designed for research, education, and computer vision exploration.",
-    image: "/img-segmentation.png",
-    github: "https://github.com/AlexKalll/img-segmentation",
-    demo: "https://img-seg.streamlit.app",
-    tags: [
-      "Machine Learning",
-      "Computer Vision",
-      "Python",
-      "Streamlit",
-      "AI Tools",
-      "Data Visualization",
-      "Image Processing",
-      "Open Source",
-    ],
-    keyFeatures: [
-      "Adjustable segmentation parameters (k, sigma, min_size)",
-      "Real-time image processing and visualization",
-      "Downloadable segmented results and analytics",
-      "Clean dark UI theme with responsive layout",
-    ],
-    technicalChallenges: [
-      "Building a real-time, latency-free image processing pipeline",
-      "Optimizing algorithm performance on large images",
-      "Designing a clear and intuitive Streamlit UI",
-    ],
-    techStack: [
-      {
-        name: "Python",
-        description:
-          "Used for developing the core segmentation logic and data handling processes.",
-      },
-      {
-        name: "Streamlit",
-        description:
-          "Framework that transforms Python scripts into interactive web applications easily.",
-      },
-      {
-        name: "scikit-image",
-        description:
-          "A Python library that provides efficient image processing and analysis functions.",
-      },
-      {
-        name: "NumPy & Matplotlib",
-        description:
-          "Handle mathematical operations and visualization for performance and clarity.",
       },
     ],
   },
@@ -271,6 +218,59 @@ export const projects: Project[] = [
     ],
   },
 
+  {
+    title: "Image Segmentation Studio (FH Edition)",
+    description: "Interactive web app for segmenting and analyzing images using AI.",
+    detailedDescription:
+      "A professional image segmentation platform built with Streamlit that applies the Felzenszwalb–Huttenlocher graph-based algorithm. Users can adjust parameters in real time, view side-by-side results, and download segmented images with analytics. Designed for research, education, and computer vision exploration.",
+    image: "/img-segmentation.png",
+    github: "https://github.com/AlexKalll/img-segmentation",
+    demo: "https://img-seg.streamlit.app",
+    tags: [
+      "Machine Learning",
+      "Computer Vision",
+      "Python",
+      "Streamlit",
+      "AI Tools",
+      "Data Visualization",
+      "Image Processing",
+      "Open Source",
+    ],
+    keyFeatures: [
+      "Adjustable segmentation parameters (k, sigma, min_size)",
+      "Real-time image processing and visualization",
+      "Downloadable segmented results and analytics",
+      "Clean dark UI theme with responsive layout",
+    ],
+    technicalChallenges: [
+      "Building a real-time, latency-free image processing pipeline",
+      "Optimizing algorithm performance on large images",
+      "Designing a clear and intuitive Streamlit UI",
+    ],
+    techStack: [
+      {
+        name: "Python",
+        description:
+          "Used for developing the core segmentation logic and data handling processes.",
+      },
+      {
+        name: "Streamlit",
+        description:
+          "Framework that transforms Python scripts into interactive web applications easily.",
+      },
+      {
+        name: "scikit-image",
+        description:
+          "A Python library that provides efficient image processing and analysis functions.",
+      },
+      {
+        name: "NumPy & Matplotlib",
+        description:
+          "Handle mathematical operations and visualization for performance and clarity.",
+      },
+    ],
+  },
+  
   {
     title: "CrediTrust Complaint RAG Chatbot",
     description:
