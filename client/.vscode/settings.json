@@ -1,0 +1,25 @@
+{
+  "typescript.preferences.useAliasesForRenames": false,
+  "typescript.validate.enable": false,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "javascript.validate.enable": false,
+  "typescript.disableAutomaticTypeAcquisition": false,
+  "typescript.suggest.autoImports": true,
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.reportStyleChecksAsWarnings": false,
+  "typescript.check.npmIsInstalled": false,
+  "typescript.showUnused": false,
+  "typescript.preferences.includePackageJsonAutoImports": "off",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.associations": {
+    "*.tsx": "typescriptreact",
+    "*.ts": "typescript"
+  },
+  "problems.showCurrentInStatus": false
+}
