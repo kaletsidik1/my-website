@@ -121,7 +121,12 @@ function NewsletterForm() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus(null);
-    const fd = new FormData(e.currentTarget as HTMLFormElement);
+    // Capture the form element immediately. React's SyntheticEvent is pooled
+    // and its properties are cleared after an async/await boundary. If we
+    // reference `e.currentTarget` after awaiting, it can be null which causes
+    // the runtime error: "Cannot read properties of null (reading 'reset')".
+    const form = e.currentTarget as HTMLFormElement;
+    const fd = new FormData(form);
     const email = String(fd.get('newsletter-email') || '');
     if (!email) {
       setStatus({ message: 'Please enter your email', type: 'error' });
@@ -137,7 +142,9 @@ function NewsletterForm() {
       const json = await res.json();
       if (res.ok && json.ok) {
         setStatus({ message: 'Subscribed — thank you!', type: 'success' });
-        (e.currentTarget as HTMLFormElement).reset();
+        // Use the captured form element rather than `e.currentTarget` after
+        // awaiting. This avoids reading a cleared/purged synthetic event.
+        form.reset();
       } else {
         setStatus({ message: json.error || 'Subscription failed', type: 'error' });
       }
