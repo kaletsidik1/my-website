@@ -46,10 +46,10 @@ export default function Footer() {
 
           <div className="text-center md:text-left">
             <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-red-400 text-transparent bg-clip-text">
-              Kaletsidik Ayalew
+              Kaletsidik A.
             </h3>
             <p className="text-gray-400 mb-4">
-              Crafting digital experiences with passion and precision
+              Fueled by coffee😊, guided by curiosity, and driven to build by teamwork.
             </p>
 
             <div className="flex justify-center md:justify-start space-x-4">
@@ -88,7 +88,7 @@ export default function Footer() {
 
           {/* Newsletter Section */}
           <div className="text-center md:text-right">
-            <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>
+            <h3 className="text-md font-semibold mb-4">Stay Grasping Latest News!</h3>
             <NewsletterForm />
           </div>
         </div>
