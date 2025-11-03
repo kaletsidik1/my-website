@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function Commitments() {
   return (
-    <section id="commitments" className="py-16 bg-gray-800">
+  <section id="commitments" className="py-16 bg-gray-800 scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
   <h2 className="text-3xl font-bold text-white mb-6 text-center">Some Commitments</h2>
 
@@ -18,7 +18,7 @@ export default function Commitments() {
               className="text-sm text-gray-300 mb-2 text-center hover:underline"
               aria-label="GitHub profile"
             >
-              GitHub — AlexKalll
+              GitHub - AlexKalll
             </a>
             <a
               href="https://github.com/AlexKalll"
@@ -66,7 +66,7 @@ export default function Commitments() {
               className="text-sm text-gray-300 mb-2 text-center hover:underline"
               aria-label="LeetCode profile"
             >
-              LeetCode — Alexkal
+              LeetCode - Alexkal
             </a>
             <a
               href="https://leetcode.com/u/Alexkal/"
@@ -101,7 +101,7 @@ export default function Commitments() {
               className="text-sm text-gray-300 mb-2 text-center hover:underline"
               aria-label="Codeforces profile"
             >
-              Codeforces — alexkalalw
+              Codeforces - alexkalalw
             </a>
             <a
               href="https://codeforces.com/profile/alexkalalw"

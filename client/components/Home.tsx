@@ -111,7 +111,7 @@ export default function Home() {
               className="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-6"
             >
               <motion.a
-                href="#about"
+                href="/#about"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-3 rounded-full font-semibold text-white bg-gradient-to-r from-blue-500 to-sky-500 hover:from-blue-600 hover:to-sky-600 shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
@@ -120,7 +120,9 @@ export default function Home() {
               </motion.a>
               
               <motion.a
-                href="#resume"
+                href="/resume"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-3 rounded-full font-semibold text-white bg-gray-800 hover:bg-gray-700 shadow-lg hover:shadow-gray-500/25 transition-all duration-300"

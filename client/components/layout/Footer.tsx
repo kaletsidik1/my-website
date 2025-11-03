@@ -29,10 +29,10 @@ export default function Footer() {
   ];
 
   const footerLinks = [
-    { title: "About", href: "#about" },
-    { title: "Resume", href: "/resume" },
-    { title: "Skills", href: "#skills" },
-    { title: "Contact", href: "#contact" }
+    { title: "About", href: "/#about" },
+    { title: "Projects", href: "/#projects" },
+    { title: "Skills", href: "/#skills" },
+    { title: "Contact", href: "/#contact" }
   ];
 
   return (
@@ -72,7 +72,7 @@ export default function Footer() {
           {/* Quick Links */}
           <div className="text-center">
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <div className="grid grid-cols-2 gap-x-2 gap-y-0 justify-center">
+            <div className="grid grid-cols-2 gap-4 justify-center">
               <ul className="space-y-2">
                 {footerLinks.map((link) => (
                   <li key={link.title}>
@@ -88,10 +88,10 @@ export default function Footer() {
 
               <ul className="space-y-2">
                 <li>
-                  <a href="#commitments" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">Commitments</a>
+                  <a href="/#commitments" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">Commitments</a>
                 </li>
                 <li>
-                  <a href="#projects" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">Projects</a>
+                  <a href="/resume" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">Resume</a>
                 </li>
               </ul>
             </div>

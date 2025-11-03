@@ -56,7 +56,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-gray-900 to-black text-white">
+    <section id="about" className="py-20 bg-gradient-to-b from-gray-900 to-black text-white scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Background Elements */}
         <motion.div 
@@ -122,7 +122,7 @@ export default function About() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="relative"
+              className="relative scroll-mt-24"
             >
               <div className="bg-gray-800/50 backdrop-blur-lg p-8 rounded-2xl border border-gray-700/50 shadow-xl">
                 <h3 className="text-2xl font-semibold mb-8 text-center bg-gradient-to-r from-blue-400 to-pink-300 text-transparent bg-clip-text">
