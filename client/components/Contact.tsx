@@ -13,10 +13,32 @@ interface FormStatus {
 export default function Contact() {
   const [formStatus, setFormStatus] = useState<FormStatus>({ message: '', type: '' });
   
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
-    setFormStatus({ message: 'Message sent successfully!', type: 'success' });
-    e.currentTarget.reset();
+    setFormStatus({ message: '', type: '' });
+
+    const form = e.currentTarget as HTMLFormElement;
+    const fd = new FormData(form);
+    const name = String(fd.get('name') || '');
+    const email = String(fd.get('email') || '');
+    const message = String(fd.get('message') || '');
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, message }),
+      });
+      const json = await res.json();
+      if (res.ok && json.ok) {
+        setFormStatus({ message: 'Message sent successfully!', type: 'success' });
+        form.reset();
+      } else {
+        setFormStatus({ message: json.error || 'Failed to send message', type: 'error' });
+      }
+    } catch (err: any) {
+      setFormStatus({ message: err?.message || 'Network error', type: 'error' });
+    }
   };
 
   const socialLinks = [

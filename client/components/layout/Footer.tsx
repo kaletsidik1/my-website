@@ -1,6 +1,7 @@
 // @ts-nocheck
-'use client'
+ 'use client'
 import { motion } from "framer-motion";
+import { useState } from 'react';
 import { 
   FaGithub, 
   FaLinkedinIn, 
@@ -88,20 +89,7 @@ export default function Footer() {
           {/* Newsletter Section */}
           <div className="text-center md:text-right">
             <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>
-            <form className="flex flex-col md:items-end space-y-3">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="w-full md:w-64 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-purple-500 transition-colors duration-300"
-              />
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full md:w-64 py-2 bg-gradient-to-r from-gray-600 to-gray-600 rounded-lg font-medium hover:from-purple-700 hover:to-pink-700 transition-colors duration-300"
-              >
-                Subscribe
-              </motion.button>
-            </form>
+            <NewsletterForm />
           </div>
         </div>
 
@@ -124,5 +112,59 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+  );
+}
+
+function NewsletterForm() {
+  const [status, setStatus] = useState<{ message: string; type?: string } | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus(null);
+    const fd = new FormData(e.currentTarget as HTMLFormElement);
+    const email = String(fd.get('newsletter-email') || '');
+    if (!email) {
+      setStatus({ message: 'Please enter your email', type: 'error' });
+      return;
+    }
+
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+      const json = await res.json();
+      if (res.ok && json.ok) {
+        setStatus({ message: 'Subscribed — thank you!', type: 'success' });
+        (e.currentTarget as HTMLFormElement).reset();
+      } else {
+        setStatus({ message: json.error || 'Subscription failed', type: 'error' });
+      }
+    } catch (err: any) {
+      setStatus({ message: err?.message || 'Network error', type: 'error' });
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="flex flex-col md:items-end space-y-3">
+      <input
+        name="newsletter-email"
+        type="email"
+        placeholder="Enter your email"
+        className="w-full md:w-64 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-purple-500 transition-colors duration-300"
+      />
+      <motion.button
+        type="submit"
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.98 }}
+        className="w-full md:w-64 py-2 bg-gradient-to-r from-gray-600 to-gray-600 rounded-lg font-medium hover:from-purple-700 hover:to-pink-700 transition-colors duration-300"
+      >
+        Subscribe
+      </motion.button>
+      {status && (
+        <p className={`mt-2 text-sm ${status.type === 'success' ? 'text-green-300' : 'text-red-300'}`}>{status.message}</p>
+      )}
+    </form>
   );
 }
