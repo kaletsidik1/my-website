@@ -23,6 +23,14 @@ export default function Contact() {
     const email = String(fd.get('email') || '');
     const message = String(fd.get('message') || '');
 
+    // Guard: do not allow submissions that claim to be from the site owner's email
+    const ownerEmail = 'findkal.here@gmail.com';
+    const normalize = (s: string) => String(s || '').trim().toLowerCase();
+    if (normalize(email) === normalize(ownerEmail)) {
+      setFormStatus({ message: 'Please use your own email address — sending from this address is not allowed.', type: 'error' });
+      return;
+    }
+
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',

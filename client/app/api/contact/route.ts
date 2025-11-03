@@ -44,7 +44,20 @@ export async function POST(req: Request) {
       return NextResponse.json({ ok: false, error: 'Missing fields' }, { status: 400 });
     }
 
-    await sendEmail({ name, email, message });
+    // Protect against forged submissions that attempt to use the site owner's email
+    const ownerEmail = 'findkal.here@gmail.com';
+    const normalize = (s: string) => String(s || '').trim().toLowerCase();
+    const protectedEmails = new Set([
+      normalize(ownerEmail),
+      normalize(process.env.SMTP_USER || ''),
+      normalize(process.env.TO_EMAIL || ''),
+    ]);
+
+    if (protectedEmails.has(normalize(email))) {
+      return NextResponse.json({ ok: false, error: 'Submissions from this email address are not allowed.' }, { status: 400 });
+    }
+
+  await sendEmail({ name, email, message });
 
     return NextResponse.json({ ok: true });
   } catch (err: any) {

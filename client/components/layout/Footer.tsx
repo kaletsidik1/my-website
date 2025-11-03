@@ -133,6 +133,14 @@ function NewsletterForm() {
       return;
     }
 
+    // Guard: block subscriptions that use the site owner's email
+    const ownerEmail = 'findkal.here@gmail.com';
+    const normalize = (s: string) => String(s || '').trim().toLowerCase();
+    if (normalize(email) === normalize(ownerEmail)) {
+      setStatus({ message: 'Oops! Please use your own email address.', type: 'error' });
+      return;
+    }
+
     try {
       const res = await fetch('/api/subscribe', {
         method: 'POST',

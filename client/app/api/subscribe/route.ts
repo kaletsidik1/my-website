@@ -36,6 +36,18 @@ export async function POST(req: Request) {
     if (!email) {
       return NextResponse.json({ ok: false, error: 'Missing email' }, { status: 400 });
     }
+    // Protect against subscriptions that use the site owner's email address
+    const ownerEmail = 'findkal.here@gmail.com';
+    const normalize = (s: string) => String(s || '').trim().toLowerCase();
+    const protectedEmails = new Set([
+      normalize(ownerEmail),
+      normalize(process.env.SMTP_USER || ''),
+      normalize(process.env.TO_EMAIL || ''),
+    ]);
+
+    if (protectedEmails.has(normalize(email))) {
+      return NextResponse.json({ ok: false, error: 'Subscriptions from this email address are not allowed.' }, { status: 400 });
+    }
 
     await sendSubscribeEmail(email);
     return NextResponse.json({ ok: true });
