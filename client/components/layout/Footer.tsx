@@ -30,7 +30,7 @@ export default function Footer() {
 
   const footerLinks = [
     { title: "About", href: "#about" },
-    { title: "Projects", href: "#projects" },
+    { title: "Resume", href: "/resume" },
     { title: "Skills", href: "#skills" },
     { title: "Contact", href: "#contact" }
   ];
@@ -72,18 +72,29 @@ export default function Footer() {
           {/* Quick Links */}
           <div className="text-center">
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              {footerLinks.map((link) => (
-                <li key={link.title}>
-                  <a
-                    href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors duration-300"
-                  >
-                    {link.title}
-                  </a>
+            <div className="grid grid-cols-2 gap-x-2 gap-y-0 justify-center">
+              <ul className="space-y-2">
+                {footerLinks.map((link) => (
+                  <li key={link.title}>
+                    <a
+                      href={link.href}
+                      className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
+                    >
+                      {link.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+
+              <ul className="space-y-2">
+                <li>
+                  <a href="#commitments" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">Commitments</a>
                 </li>
-              ))}
-            </ul>
+                <li>
+                  <a href="#projects" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">Projects</a>
+                </li>
+              </ul>
+            </div>
           </div>
 
           {/* Newsletter Section */}
