@@ -3,6 +3,7 @@
 import Home from '../components/Home';
 import About from '../components/About';
 import Projects from '../components/projects';
+import Commitments from '../components/Commitments';
 import Contact from '../components/Contact';
 
 export default function HomePage() {
@@ -11,6 +12,7 @@ export default function HomePage() {
       <Home />
       <About />
       <Projects />
+      <Commitments />
       <Contact />
     </div>
   );
