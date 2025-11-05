@@ -24,4 +24,4 @@ A modern, responsive portfolio built with Next.js and Tailwind CSS to showcase p
    
 
 ## Deployment  
-Comming soon...
+- My website is live on www.kal.engineer
