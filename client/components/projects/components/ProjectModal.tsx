@@ -1,4 +1,3 @@
-// @ts-nocheck
 //@ts-ignore
 import { motion, AnimatePresence } from "framer-motion"; //@ts-ignore
 import { FaGithub, FaExternalLinkAlt, FaTimes } from "react-icons/fa";

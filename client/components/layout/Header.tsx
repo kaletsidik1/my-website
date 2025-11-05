@@ -1,8 +1,7 @@
-// @ts-nocheck
-'use client';
+ 'use client';
 import Link from 'next/link';
 import { useState } from 'react';
-import { Logs, Minimize, Paintbrush, Cpu, Idea, Code2,Lightbulb } from 'lucide-react';
+import { Logs, Minimize, Paintbrush, Cpu, Code2, Lightbulb } from 'lucide-react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

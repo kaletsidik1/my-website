@@ -1,5 +1,4 @@
-// @ts-nocheck
-'use client'
+ 'use client'
 import { motion } from 'framer-motion';
 import {
   SiEthereum,

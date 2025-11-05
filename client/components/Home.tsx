@@ -1,5 +1,4 @@
-// @ts-nocheck
-'use client'
+ 'use client'
 import { motion } from 'framer-motion';
 import { FaGithub, FaXTwitter, FaTelegram, FaLinkedinIn, FaEnvelope, FaInstagram } from 'react-icons/fa6';
 import { SiLeetcode, SiCodeforces } from 'react-icons/si';

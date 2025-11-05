@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { Project } from "../data/types";

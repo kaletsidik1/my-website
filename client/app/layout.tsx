@@ -1,4 +1,3 @@
-// @ts-nocheck
 // app/layout.tsx
 import '../styles/globals.css';
 import Header from '../components/layout/Header';
